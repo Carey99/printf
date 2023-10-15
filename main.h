@@ -1,7 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-
+/**
+* struct functions - format holder
+* @id: format specifier
+* @f: Function pointer
+*/
 typedef struct functions
 	{
 	char *id;
