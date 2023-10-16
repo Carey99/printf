@@ -19,6 +19,6 @@ int _testf(const char *format, ...);
 int printfc(va_list num);
 int printfs(va_list num);
 int printfpercent(void);
-int functions_f(const char *spec, va_list ap);
+int functions_f(char spec, va_list ap);
 
 #endif

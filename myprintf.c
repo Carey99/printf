@@ -25,9 +25,7 @@ int _printf(const char *format, ...)
 	{
 	if (*format == '%')
 		{
-		format++;
-		count += functions_f(format, ap);
-		format++;
+		count += functions_f(*(++format), ap);
 		}
 	else
 		{
