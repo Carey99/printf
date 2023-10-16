@@ -1,28 +1,32 @@
 #include "main.h"
-#include <unistd.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdarg.h>
 
 /**
 * putting_s - Prints string
-* @s: String being printed
-* Return: Count number
+* @s: string
+* Return: Length of the string
 */
 
 int putting_s(char *s)
 {
-	int count = 0;
+	int i, length;
 
 	if (s == NULL)
 	{
-	count += write(1, "(null)", 6);
+	s = "(null)";
+	length = strlen(s);
+	for (i = 0; i < length; i++)
+	putchar(s[i]);
+	return (length);
 	}
 	else
 	{
-	int len = strlen(s);
-
-	count += write(1, s, len);
+	length = strlen(s);
+	for (i = 0; i < length; i++)
+	putchar(s[i]);
+	return (length);
 	}
-	return (count);
 }
