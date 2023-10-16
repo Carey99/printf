@@ -5,7 +5,7 @@
 
 /**
 * functions_f - These functions are being called
-* @spec: Cahr dermining what to be printed
+* @spec: Char dertemining what to be printed
 * @ap: Argument pointer
 * Return: Count, wht to be printed
 */
@@ -28,6 +28,7 @@ int functions_f(char spec, va_list ap)
 	}
 	else
 	{
+	putchar('%');
 	write(1, &spec, 1);
 	count += 2;
 	}
