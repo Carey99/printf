@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "printfc.h"
 #include "main.h"
 #include <limits.h>
 
