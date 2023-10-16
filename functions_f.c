@@ -10,25 +10,26 @@
 * Return: Count, wht to be printed
 */
 
-int functions_f(char spec, va_list ap)
+int functions_f(const char *spec, va_list ap)
 {
 	int count = 0;
 
-	if (spec == 'c')
+	if (*spec == 'c')
 	{
 	count += putting_c(va_arg(ap, int));
 	}
-	else if (spec == 's')
+	else if (*spec == 's')
 	{
 	count += putting_s(va_arg(ap, char *));
 	}
-	else if (spec == '%')
+	else if (*spec == '%')
 	{
 	count += write(1, "%", 1);
 	}
 	else
 	{
-	count += write(1, &spec, 1);
+	write(1, &spec, 1);
+	count += 2; 
 	}
 	return (count);
 }
