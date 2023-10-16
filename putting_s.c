@@ -14,11 +14,15 @@ int putting_s(char *s)
 {
 	int count = 0;
 
-	while (*s != '\0')
+	if (s == NULL)
 	{
-	putting_c((int)*s);
-	++count;
-	++s;
+	count += write(1, "(null)", 6);
+	}
+	else
+	{
+	int len = strlen(s);
+
+	count += write(1, s, len);
 	}
 	return (count);
 }

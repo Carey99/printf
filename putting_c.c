@@ -11,5 +11,8 @@
 
 int putting_c(int c)
 {
-	return (write(1, &c, 1));
+	int count = 0;
+
+	count += (write(1, &c, 1));
+	return (count);
 }
