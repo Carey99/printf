@@ -3,23 +3,33 @@
 #include <unistd.h>
 #include <stdarg.h>
 /**
-* putting_i - Printing binary
-* @num: Number to be converted
+* putting_b - Printing binary
+* @n: Number to be converted
 * Return: Recturn printed value
 */
 int putting_b(unsigned int n)
 {
-	int size = sizeof(unsigned int) * 8;
-	int i;
-	char binary[33];
+	int i, b, f = 0, c = 0, a = 1;
+	unsigned int p;
 
-	binary[size] = '\0';
-
-	for (i = size - 1; i >= 0; i--)
+	for (i = 0; i < 32; i++)
 	{
-		binary[i] = (n & 1) ? '1' : '0';
-		n >>= 1;
+	p = ((a << (32 - i)) & n);
+	if (p >> (31 - i))
+	{
+	f = 1;
 	}
-
-	return (write(1, binary, size));
+	if (f)
+	{
+	b = p >> (31 - i);
+	putchar(b + 48);
+	c++;
+	}
+	}
+	if (c == 0)
+	{
+	c++;
+	putchar('0');
+	}
+	return (c);
 }
