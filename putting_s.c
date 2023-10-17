@@ -12,18 +12,17 @@
 
 int putting_s(char *s)
 {
-	int c = 0;
+	int count = 0;
 
 	if (s == NULL)
 	{
-		c = putting_s("(null)");
-		return (c);
+	count += write(1, "(null)", 6);
 	}
-	while (*s != '\0')
+	else
 	{
-	putchar(*s);
-	s++;
-	c++;
+	int len = strlen(s);
+
+	count = write(1, s, len);
 	}
-	return (c);
+	return (count);
 }
