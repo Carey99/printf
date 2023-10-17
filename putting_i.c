@@ -12,7 +12,7 @@
 int putting_i(long n, int base)
 {
 	int count;
-	char symbol[] = "123456789abcdef";
+	char symbol[] = "0123456789abcdef";
 
 	if (n < 0)
 	{
