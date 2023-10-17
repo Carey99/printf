@@ -22,7 +22,7 @@ int putting_s(char *s)
 	{
 	int len = strlen(s);
 
-	count = write(1, s, len);
+	count += write(1, s, len);
 	}
 	return (count);
 }
