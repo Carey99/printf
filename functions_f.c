@@ -26,6 +26,18 @@ int functions_f(char spec, va_list ap)
 	{
 	count += write(1, "%", 1);
 	}
+	else if (spec == 'd' || spec == 'i')
+	{
+	count += putting_i((long)va_arg(ap, int), 10);
+	}
+	else if (spec == 'x')
+	{
+	count += putting_i((long)va_arg(ap, unsigned int), 16);
+	}
+	else if (spec == 'b')
+	{
+	count += putting_b(va_arg(ap, unsigned int));
+	}
 	else
 	{
 	count += write(1, &spec, 1);

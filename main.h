@@ -18,6 +18,7 @@ int putting_c(int c);
 int putting_s(char *s);
 int _testf(const char *format, ...);
 int printfc(va_list num);
+int putting_b(unsigned int n);
 int printfs(va_list num);
 int printfpercent(void);
 int functions_f(char spec, va_list ap);
