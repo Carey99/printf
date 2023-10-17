@@ -1,7 +1,11 @@
 #include "main.h"
 #include <stdio.h>
-int main()
+/**
+* main - Entry oint
+* Return: o success
+*/
+int main(void)
 {
-	_printf("My name is Carey %r or %%r");
+	_printf("My name is Carey %r");
 	return (0);
 }

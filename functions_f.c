@@ -24,7 +24,7 @@ int functions_f(char spec, va_list ap)
 	}
 	else if (spec == '%')
 	{
-	count = write(1, "%", 1);
+	count += write(1, "%", 1);
 	}
 	else
 	{
