@@ -13,6 +13,7 @@ typedef struct functions
 	int (*f)();
 	} func;
 int _printf(const char *format, ...);
+int putting_i(long n, int base);
 int putting_c(int c);
 int putting_s(char *s);
 int _testf(const char *format, ...);
