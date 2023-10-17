@@ -22,10 +22,6 @@ int functions_f(char spec, va_list ap)
 	{
 	count += putting_s(va_arg(ap, char *));
 	}
-	else if (spec == 'i' || spec == 'd')
-	{
-	count += putting_i((long)va_arg(ap, int), 10);
-	}
 	else if (spec == '%')
 	{
 	count += write(1, "%", 1);
