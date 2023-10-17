@@ -33,5 +33,6 @@ int _printf(const char *format, ...)
 		}
 	++format;
 	}
+	write(1, "\n", 1);
 	return (count);
 }

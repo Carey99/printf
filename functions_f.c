@@ -28,9 +28,7 @@ int functions_f(char spec, va_list ap)
 	}
 	else
 	{
-	putchar('%');
-	write(1, &spec, 1);
-	count += 2;
+	count += write(1, &spec, 1);
 	}
 	return (count);
 }
